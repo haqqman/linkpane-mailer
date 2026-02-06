@@ -60,4 +60,6 @@ attachToForm(form, {
 - `redhat` (honeypot field; keep empty)
 
 ### Origin Rules
-For mobile apps, submit through your backend proxy to satisfy Linkpane’s Origin checks.
+For server-side usage, you must set an `Origin` header that matches the form’s
+`source_url`. For mobile apps, submit through your backend proxy to satisfy
+Linkpane’s Origin checks.

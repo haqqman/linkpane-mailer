@@ -11,15 +11,27 @@
     },
     "packages/mailer": {
       "name": "@linkpane/mailer",
-      "version": "0.1.0",
+      "version": "1.0.0",
     },
     "packages/mailer-post": {
       "name": "@linkpane/mailer-post",
-      "version": "0.1.0",
+      "version": "1.0.0",
     },
     "packages/newsletter": {
       "name": "@linkpane/newsletter",
+      "version": "1.0.0",
+    },
+    "packages/newsletter-subscribe": {
+      "name": "@linkpane/newsletter-subscribe",
       "version": "0.1.0",
+    },
+    "packages/sdk": {
+      "name": "@linkpane/sdk",
+      "version": "0.1.0",
+      "dependencies": {
+        "@linkpane/mailer-post": "^0.1.0",
+        "@linkpane/newsletter-subscribe": "^0.1.0",
+      },
     },
   },
   "packages": {
@@ -90,6 +102,10 @@
     "@linkpane/mailer-post": ["@linkpane/mailer-post@workspace:packages/mailer-post"],
 
     "@linkpane/newsletter": ["@linkpane/newsletter@workspace:packages/newsletter"],
+
+    "@linkpane/newsletter-subscribe": ["@linkpane/newsletter-subscribe@workspace:packages/newsletter-subscribe"],
+
+    "@linkpane/sdk": ["@linkpane/sdk@workspace:packages/sdk"],
 
     "@rollup/rollup-android-arm-eabi": ["@rollup/rollup-android-arm-eabi@4.57.1", "", { "os": "android", "cpu": "arm" }, "sha512-A6ehUVSiSaaliTxai040ZpZ2zTevHYbvu/lDoeAteHI8QnaosIzm4qwtezfRg1jOYaUmnzLX1AOD6Z+UJjtifg=="],
 
@@ -334,6 +350,8 @@
     "why-is-node-running": ["why-is-node-running@2.3.0", "", { "dependencies": { "siginfo": "^2.0.0", "stackback": "0.0.2" }, "bin": { "why-is-node-running": "cli.js" } }, "sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w=="],
 
     "yocto-queue": ["yocto-queue@1.2.2", "", {}, "sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ=="],
+
+    "@linkpane/sdk/@linkpane/mailer-post": ["@linkpane/mailer-post@0.1.0", "", {}, "sha512-DfDL9Mf/e101mvVHjDujJxxBkat6OUlN4iII8prQTzmQwPvwZPSFo/lH47vq9pU32aZepSPYrWg9ac+DJc32gQ=="],
 
     "mlly/pathe": ["pathe@2.0.3", "", {}, "sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w=="],
 

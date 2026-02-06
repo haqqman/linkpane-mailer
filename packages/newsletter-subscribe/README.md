@@ -44,6 +44,8 @@ Common optional fields:
 
 ### Origin Rules
 For browser usage, ensure the request Origin matches the configured source domain.
+For server-side usage, you must set an `Origin` header that matches the configured
+source domain.
 
 ### Server Usage
 You can supply a custom `fetch` for server environments.
