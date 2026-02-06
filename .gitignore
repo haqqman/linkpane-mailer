@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+/dist/
+/build/
+/lib/
+/out/
+.next/
+/packages/*/dist/
+/packages/*/lib/
+/packages/*/out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+*.pem
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Turbo
+.turbo/
+
+# Vercel
+.vercel
+
+# Bun / Package managers
+bun.lockb
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# Temp files
+.temp/
+.tmp/
+
+# Local npm cache
+.npm-cache/

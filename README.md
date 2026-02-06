@@ -1,6 +1,6 @@
 # Linkpane Mailer SDKs
 
-Monorepo for Linkpane SDK packages.
+Monorepo for Linkpane Mailer SDK packages.
 
 ## Packages
 

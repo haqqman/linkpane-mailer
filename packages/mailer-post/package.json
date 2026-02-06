@@ -1,17 +1,19 @@
 {
   "name": "@linkpane/mailer-post",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Submission-only SDK for Linkpane Mailer forms",
-  "main": "dist/index.cjs",
+  "main": "dist-cjs/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "dist-cjs"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --sourcemap",
-    "dev": "tsup src/index.ts --format cjs,esm --dts --sourcemap --watch"
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "dev": "tsc -p tsconfig.esm.json --watch",
+    "prepublishOnly": "npm run build"
   },
   "license": "Apache-2.0",
   "engines": {
