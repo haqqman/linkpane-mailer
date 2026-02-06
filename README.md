@@ -5,9 +5,9 @@ Monorepo for Linkpane Mailer SDK packages.
 ## Packages
 
 Published packages:
+- `@linkpane/sdk`: Aggregate SDK (mailer-post + newsletter-subscribe)
 - `@linkpane/mailer-post`: Submission-only SDK for Mailer forms
 - `@linkpane/newsletter-subscribe`: Subscribe-only SDK for Newsletter endpoints
-- `@linkpane/sdk`: Aggregate SDK (mailer-post + newsletter-subscribe)
 
 Internal packages (not published):
 - `@linkpane/mailer`: Mailer CRUD SDK (stub)
@@ -24,7 +24,10 @@ Apache-2.0. Linkpane is a product of Haqqman.
 
 ## Status
 
-Only `@linkpane/mailer-post` is implemented at the moment.
+Implemented packages:
+- `@linkpane/sdk` (aggregate)
+- `@linkpane/mailer-post`
+- `@linkpane/newsletter-subscribe`
 
 ## Install All (Aggregate SDK)
 
