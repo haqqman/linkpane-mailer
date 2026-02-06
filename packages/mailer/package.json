@@ -1,0 +1,19 @@
+{
+  "name": "@linkpane/mailer",
+  "version": "1.0.0",
+  "description": "Mailer CRUD SDK for Linkpane",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --sourcemap",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --sourcemap --watch"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

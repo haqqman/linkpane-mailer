@@ -1,0 +1,19 @@
+{
+  "name": "linkpane-mailer-sdk",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run -w @linkpane/mailer-post build && npm run -w @linkpane/mailer build && npm run -w @linkpane/newsletter build",
+    "lint": "echo \"No lint configured yet\"",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
