@@ -25,3 +25,22 @@ Apache-2.0. Linkpane is a product of Haqqman.
 ## Status
 
 Only `@linkpane/mailer-post` is implemented at the moment.
+
+## Install All (Aggregate SDK)
+
+Use the aggregate package to get all public Linkpane SDKs in one install:
+
+```bash
+npm install @linkpane/sdk
+```
+
+Example:
+
+```ts
+import { submitForm, subscribeNewsletter } from '@linkpane/sdk'
+```
+
+## Root Export Map (optional)
+
+If you prefer a single root package for exports, you can expose a root export map
+from `@linkpane/sdk` and keep per-package imports available.
