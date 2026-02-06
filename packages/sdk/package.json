@@ -1,0 +1,26 @@
+{
+  "name": "@linkpane/sdk",
+  "version": "0.1.0",
+  "description": "Aggregate SDK for Linkpane integrations",
+  "main": "dist-cjs/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "dist-cjs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "dev": "tsc -p tsconfig.esm.json --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@linkpane/mailer-post": "^0.1.0",
+    "@linkpane/newsletter-subscribe": "^0.1.0"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=16"
+  }
+}

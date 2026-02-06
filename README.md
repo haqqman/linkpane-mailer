@@ -7,6 +7,7 @@ Monorepo for Linkpane Mailer SDK packages.
 Published packages:
 - `@linkpane/mailer-post`: Submission-only SDK for Mailer forms
 - `@linkpane/newsletter-subscribe`: Subscribe-only SDK for Newsletter endpoints
+- `@linkpane/sdk`: Aggregate SDK (mailer-post + newsletter-subscribe)
 
 Internal packages (not published):
 - `@linkpane/mailer`: Mailer CRUD SDK (stub)
