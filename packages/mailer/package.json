@@ -2,6 +2,7 @@
   "name": "@linkpane/mailer",
   "version": "1.0.0",
   "description": "Mailer CRUD SDK for Linkpane",
+  "private": true,
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

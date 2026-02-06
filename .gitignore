@@ -12,6 +12,7 @@ node_modules/
 /packages/*/dist/
 /packages/*/lib/
 /packages/*/out/
+/packages/*/dist-cjs/
 
 # Logs
 npm-debug.log*

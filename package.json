@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run -w @linkpane/mailer-post build && npm run -w @linkpane/mailer build && npm run -w @linkpane/newsletter build",
+    "build": "npm run -w @linkpane/mailer-post build && npm run -w @linkpane/mailer build && npm run -w @linkpane/newsletter-subscribe build",
     "lint": "echo \"No lint configured yet\"",
     "test": "vitest run",
     "test:watch": "vitest"
