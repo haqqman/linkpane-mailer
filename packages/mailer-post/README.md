@@ -1,6 +1,9 @@
 # @linkpane/mailer-post
 
-Submission-only SDK for Linkpane Mailer forms.
+Submission-only SDK for Linkpane Mailer forms. Use this when you want to post
+form data to a Linkpane inbox endpoint without managing forms.
+
+Linkpane Mailer is a hosted form and email capture service by Haqqman. It allows you to collect form submissions and newsletter signups without building, deploying, or maintaining your own backend.
 
 ## Install
 
@@ -47,5 +50,14 @@ attachToForm(form, {
 
 ## Notes
 
-- Required fields: `email`, `firstName`, `lastName`.
-- For mobile apps, submit through your backend proxy to satisfy Origin rules.
+### Required Fields (enforced by Linkpane Mailer)
+- `email`
+- `firstName`
+- `lastName`
+
+### Optional Fields
+- Any additional fields in your form (custom questions, phone, message, etc.)
+- `redhat` (honeypot field; keep empty)
+
+### Origin Rules
+For mobile apps, submit through your backend proxy to satisfy Linkpane’s Origin checks.
