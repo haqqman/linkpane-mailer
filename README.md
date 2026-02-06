@@ -8,6 +8,10 @@ Monorepo for Linkpane SDK packages.
 - `@linkpane/mailer`: Mailer CRUD SDK (stub)
 - `@linkpane/newsletter`: Newsletter SDK (stub)
 
+## License
+
+Apache-2.0. Linkpane is a product of Haqqman.
+
 ## Scripts
 
 - `npm run build`
