@@ -1,6 +1,6 @@
 {
   "name": "@linkpane/sdk",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Aggregate SDK for Linkpane integrations",
   "main": "dist-cjs/index.js",
   "module": "dist/index.js",
@@ -16,8 +16,8 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@linkpane/mailer-post": "^0.1.0",
-    "@linkpane/newsletter-subscribe": "^0.1.0"
+    "@linkpane/mailer-post": "^1.0.1",
+    "@linkpane/newsletter-subscribe": "^1.0.1"
   },
   "license": "Apache-2.0",
   "engines": {

@@ -77,3 +77,16 @@ Optional:
 
 If you prefer a single root package for exports, you can expose a root export map
 from `@linkpane/sdk` and keep per-package imports available.
+
+## Automated Versioning and Publish
+
+Publishing is automated with Changesets + GitHub Actions.
+
+Workflow:
+1. For any package change, run `npm run changeset` and commit the generated file in `.changeset/`.
+2. Merge to `production`.
+3. GitHub Action creates or updates a Version PR with bumped package versions.
+4. After that PR is merged, the Release workflow publishes to npm with the new versions.
+
+Repository secrets required:
+- `NPM_TOKEN`: npm automation token with publish permission for `@linkpane/*`
