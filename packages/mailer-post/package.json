@@ -1,6 +1,6 @@
 {
   "name": "@linkpane/mailer-post",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Submission-only SDK for Linkpane Mailer forms",
   "main": "dist-cjs/index.js",
   "module": "dist/index.js",
