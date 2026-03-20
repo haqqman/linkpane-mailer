@@ -1,5 +1,5 @@
 export type SubscribeNewsletterParams = {
-  apiBaseUrl: string
+  apiBaseUrl?: string
   username: string
   data: Record<string, any>
   headers?: Record<string, string>

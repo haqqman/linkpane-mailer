@@ -1,8 +1,8 @@
 import { SubmitFormParams } from './types'
 
 export function buildActionUrl(params: Pick<SubmitFormParams, 'apiBaseUrl' | 'pid' | 'slug'>) {
-  const base = params.apiBaseUrl.replace(/\/+$/, '')
-  return `${base}/mailer/${encodeURIComponent(params.pid)}/form/${encodeURIComponent(params.slug)}`
+  const base = params.apiBaseUrl ? String(params.apiBaseUrl) : 'https://api.linkpane.com/v2'
+  return `${base.replace(/\/+$/, '')}/mailer/${encodeURIComponent(params.pid)}/form/${encodeURIComponent(params.slug)}`
 }
 
 export function serializeForm(form: HTMLFormElement) {

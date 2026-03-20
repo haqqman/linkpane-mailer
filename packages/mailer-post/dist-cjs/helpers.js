@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildActionUrl = buildActionUrl;
 exports.serializeForm = serializeForm;
 function buildActionUrl(params) {
-    const base = params.apiBaseUrl.replace(/\/+$/, '');
-    return `${base}/mailer/${encodeURIComponent(params.pid)}/form/${encodeURIComponent(params.slug)}`;
+    const base = params.apiBaseUrl ? String(params.apiBaseUrl) : 'https://api.linkpane.com/v2';
+    return `${base.replace(/\/+$/, '')}/mailer/${encodeURIComponent(params.pid)}/form/${encodeURIComponent(params.slug)}`;
 }
 function serializeForm(form) {
     if (typeof FormData === 'undefined') {

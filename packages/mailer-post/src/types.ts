@@ -1,7 +1,7 @@
 export type SubmissionMode = 'json' | 'redirect'
 
 export type SubmitFormParams = {
-  apiBaseUrl: string
+  apiBaseUrl?: string
   pid: string
   slug: string
   data: Record<string, any>

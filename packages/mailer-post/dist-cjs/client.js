@@ -28,7 +28,7 @@ function getFetchImpl(explicitFetch) {
     return null;
 }
 async function submitForm(params) {
-    const { apiBaseUrl, pid, slug, data, mode = 'json', headers, fetch: explicitFetch, validateRequired = true, } = params;
+    const { apiBaseUrl = 'https://api.linkpane.com/v2', pid, slug, data, mode = 'json', headers, fetch: explicitFetch, validateRequired = true, } = params;
     if (validateRequired) {
         const validationError = validateRequiredFields(data);
         if (validationError) {

@@ -22,6 +22,11 @@ const dummyFetch = async (url, options) => {
         });
         (0, vitest_1.expect)(url).toBe('https://api.linkpane.com/mailer/123/form/contact-me');
     });
+    (0, vitest_1.it)('uses default url if apiBaseUrl is omitted', () => {
+        // @ts-ignore - simulating user without strict type
+        const url = (0, helpers_1.buildActionUrl)({ pid: '123', slug: 'contact' });
+        (0, vitest_1.expect)(url).toBe('https://api.linkpane.com/v2/mailer/123/form/contact');
+    });
 });
 (0, vitest_1.describe)('submitForm', () => {
     (0, vitest_1.it)('returns ok for successful submission', async () => {
@@ -30,6 +35,15 @@ const dummyFetch = async (url, options) => {
             pid: '123',
             slug: 'contact-me',
             data: { email: 'a@b.com', firstName: 'Ada', lastName: 'Lovelace' },
+            fetch: dummyFetch,
+        });
+        (0, vitest_1.expect)(result.ok).toBe(true);
+    });
+    (0, vitest_1.it)('works with default apiBaseUrl', async () => {
+        const result = await (0, client_1.submitForm)({
+            pid: '999',
+            slug: 'no-base',
+            data: { email: 'x@y.com', firstName: 'John', lastName: 'Doe' },
             fetch: dummyFetch,
         });
         (0, vitest_1.expect)(result.ok).toBe(true);

@@ -22,6 +22,12 @@ describe('buildActionUrl', () => {
     })
     expect(url).toBe('https://api.linkpane.com/mailer/123/form/contact-me')
   })
+
+  it('uses default url if apiBaseUrl is omitted', () => {
+    // @ts-ignore - simulating user without strict type
+    const url = buildActionUrl({ pid: '123', slug: 'contact' })
+    expect(url).toBe('https://api.linkpane.com/v2/mailer/123/form/contact')
+  })
 })
 
 describe('submitForm', () => {
@@ -31,6 +37,16 @@ describe('submitForm', () => {
       pid: '123',
       slug: 'contact-me',
       data: { email: 'a@b.com', firstName: 'Ada', lastName: 'Lovelace' },
+      fetch: dummyFetch as any,
+    })
+    expect(result.ok).toBe(true)
+  })
+
+  it('works with default apiBaseUrl', async () => {
+    const result = await submitForm({
+      pid: '999',
+      slug: 'no-base',
+      data: { email: 'x@y.com', firstName: 'John', lastName: 'Doe' },
       fetch: dummyFetch as any,
     })
     expect(result.ok).toBe(true)

@@ -17,7 +17,8 @@ export async function subscribeNewsletter(
     }
   }
 
-  const url = `${params.apiBaseUrl.replace(/\/+$/, '')}/mailer/newsletter/${encodeURIComponent(
+  const base = params.apiBaseUrl || 'https://api.linkpane.com/v2'
+  const url = `${base.replace(/\/+$/, '')}/mailer/newsletter/${encodeURIComponent(
     params.username
   )}/subscribe`
 

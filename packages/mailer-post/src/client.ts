@@ -26,7 +26,7 @@ function getFetchImpl(explicitFetch?: typeof fetch) {
 
 export async function submitForm(params: SubmitFormParams): Promise<SubmitFormResult> {
   const {
-    apiBaseUrl,
+    apiBaseUrl = 'https://api.linkpane.com/v2',
     pid,
     slug,
     data,
