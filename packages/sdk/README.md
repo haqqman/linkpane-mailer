@@ -41,12 +41,18 @@ await subscribeNewsletter({
 - **I want to submit a custom contact/lead form** → `@linkpane/mailer-post`
 - **I want to add newsletter subscribers** → `@linkpane/newsletter-subscribe`
 
+## Field Naming & Labels (Form Submissions)
+
+For form submissions, Linkpane uses the **keys** in your `data` object as the labels in your inbox.
+- **Format names as labels**: Use keys like `Phone Number` or `Project Type` to have them appear correctly in your dashboard.
+- **Reserved Keys**: `email`, `firstName`, and `lastName` are reserved and required.
+
 ## Required Fields (Quick Guide)
 
 Mailer form submissions require:
-- `email`
-- `firstName`
-- `lastName`
+- `email`: Used for reply-to and identifying the sender.
+- `firstName`: Sender's first name.
+- `lastName`: Sender's last name.
 
 Newsletter subscriptions typically require:
 - `email`

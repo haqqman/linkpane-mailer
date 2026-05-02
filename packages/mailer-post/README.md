@@ -48,14 +48,19 @@ attachToForm(form, {
 
 ## Notes
 
-### Required Fields (enforced by Linkpane Mailer)
-- `email`
-- `firstName`
-- `lastName`
+### Field Naming & Labels
+Linkpane Mailer uses the **keys** in your `data` object (or the `name` attributes in your HTML form) as the labels for submissions in your inbox.
+- **Format names as labels**: Use readable keys like `Phone Number` or `Project Type` if you want them to appear exactly like that in your form submissions.
+- **Reserved Keys**: `email`, `firstName`, and `lastName` are reserved and required for all submissions.
+
+### Required Fields
+- `email`: Used for reply-to and identifying the sender.
+- `firstName`: Sender's first name.
+- `lastName`: Sender's last name.
 
 ### Optional Fields
-- Any additional fields in your form (custom questions, phone, message, etc.)
-- `redhat` (honeypot field; keep empty)
+- Any additional fields (e.g., `message`, `phone`, `company`) will be captured and displayed using their key as the label.
+- `redhat`: A reserved honeypot field. Keep this empty in your UI to prevent spam; if it contains data, the submission will be silently rejected.
 
 ### Origin Rules
 For server-side usage, you must set an `Origin` header that matches the form’s
