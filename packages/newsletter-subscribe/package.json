@@ -1,6 +1,6 @@
 {
   "name": "@linkpane/newsletter-subscribe",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Subscribe-only SDK for Linkpane Newsletter endpoints",
   "main": "dist-cjs/index.js",
   "module": "dist/index.js",
