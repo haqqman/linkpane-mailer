@@ -17,7 +17,6 @@ npm install @linkpane/mailer-post
 import { submitForm } from '@linkpane/mailer-post'
 
 const result = await submitForm({
-  apiBaseUrl: 'https://api.linkpane.com',
   pid: '12345',
   slug: 'contact-me',
   data: {
@@ -40,7 +39,6 @@ import { attachToForm } from '@linkpane/mailer-post'
 
 const form = document.querySelector('#contact-form')
 attachToForm(form, {
-  apiBaseUrl: 'https://api.linkpane.com',
   pid: '12345',
   slug: 'contact-me',
   onSuccess: () => {},

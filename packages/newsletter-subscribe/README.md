@@ -17,7 +17,6 @@ npm install @linkpane/newsletter-subscribe
 import { subscribeNewsletter } from '@linkpane/newsletter-subscribe'
 
 const result = await subscribeNewsletter({
-  apiBaseUrl: 'https://api.linkpane.com',
   username: 'my-newsletter',
   data: {
     email: 'subscriber@example.com',
