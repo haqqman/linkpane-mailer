@@ -1,0 +1,42 @@
+# Linkpane Mailer SDK
+
+Linkpane Mailer is a hosted form and email capture service by Haqqman. It allows developers to collect form submissions and newsletter signups without building or maintaining a backend.
+
+## Packages
+
+- `@linkpane/sdk`: Comprehensive package containing all utilities.
+- `@linkpane/mailer-post`: Lightweight SDK for form submissions only.
+- `@linkpane/newsletter-subscribe`: Lightweight SDK for newsletter signups only.
+
+## Core API
+
+### Form Submissions (`@linkpane/mailer-post` or `@linkpane/sdk`)
+
+- `submitForm(params)`: Programmatic submission.
+- `attachToForm(element, options)`: Browser helper that attaches to an HTML form element.
+
+#### Field Naming Rules
+- **Keys as Labels**: The keys in the `data` object (or `name` attributes in HTML) are used as labels in the Linkpane inbox. 
+- **Recommendation**: Format keys like labels (e.g., `Project Type`, `Phone Number`).
+
+#### Required Fields
+- `email`: Required. Used for reply-to and sender identification.
+- `firstName`: Required. Sender's first name.
+- `lastName`: Required. Sender's last name.
+
+#### Reserved Fields
+- `redhat`: Honeypot field. Must remain empty in the UI; if submitted with data, the request is silently rejected.
+
+### Newsletter Subscriptions (`@linkpane/newsletter-subscribe` or `@linkpane/sdk`)
+
+- `subscribeNewsletter(params)`: Adds a subscriber to a Linkpane newsletter.
+
+#### Fields
+- `email`: Required.
+- `firstName`: Required.
+- `lastName`: Optional.
+
+## Technical Details
+
+- **Security**: Form submissions require an `Origin` header that matches the configured `source_url` for the inbox.
+- **Environment**: Supports both Browser and Node.js environments (allows custom `fetch` implementation).

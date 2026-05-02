@@ -49,13 +49,8 @@ For form submissions, Linkpane uses the **keys** in your `data` object as the la
 
 ## Required Fields (Quick Guide)
 
-Mailer form submissions require:
-- `email`: Used for reply-to and identifying the sender.
-- `firstName`: Sender's first name.
-- `lastName`: Sender's last name.
+**Mailer form submissions require:**
+- `email`, `firstName`, and `lastName`.
 
-Newsletter subscriptions typically require:
-- `email`
-Optional:
-- `firstName`
-- `lastName`
+**Newsletter subscriptions require:**
+- `email` and `firstName`. (`lastName` is optional).

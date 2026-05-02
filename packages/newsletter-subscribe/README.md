@@ -33,13 +33,11 @@ if (!result.ok) {
 ## Notes
 
 ### Required Fields
-Required fields depend on your Linkpane Newsletter configuration.
-Most setups require:
-- `email`
+- **email**: The subscriber's email address.
+- **firstName**: The subscriber's first name.
 
-Common optional fields:
-- `firstName`
-- `lastName`
+### Optional Fields
+- **lastName**: The subscriber's last name.
 
 ### Origin Rules
 For browser usage, ensure the request Origin matches the configured source domain.
