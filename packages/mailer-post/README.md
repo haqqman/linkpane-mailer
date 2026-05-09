@@ -49,18 +49,25 @@ attachToForm(form, {
 ## Notes
 
 ### Field Naming & Labels
-Linkpane Mailer uses the **keys** in your `data` object (or the `name` attributes in your HTML form) as the labels for submissions in your inbox.
-- **Format names as labels**: Use readable keys like `Phone Number` or `Project Type` if you want them to appear exactly like that in your form submissions.
-- **Reserved Keys**: `email`, `firstName`, and `lastName` are reserved and required for all submissions.
+Linkpane Mailer uses an attribute-driven system to resolve field labels. This allows you to use code-friendly keys (like `firstName`) while displaying human-friendly labels (like "First Name") in your dashboard and emails.
+
+When using `attachToForm`, labels are resolved in this priority:
+1. **`data-label` attribute**: The highest priority. Use this for descriptive labels (e.g., `<input name="budget" data-label="Project Budget">`).
+2. **`name` attribute**: If no `data-label` is present, the SDK uses the `name` attribute.
+3. **`id` attribute**: Fallback if `name` is missing.
+4. **Auto-Formatting**: If only a machine-readable key is found (e.g., `firstName`), the SDK auto-formats it to "First Name".
 
 ### Required Fields
-- `email`: Used for reply-to and identifying the sender.
-- `firstName`: Sender's first name.
-- `lastName`: Sender's last name.
+For the **Contacts** feature and email identification, the following core fields are required:
+- **Email**: `email` (Aliases: `email_address`, `emailAddress`)
+- **First Name**: `firstName` (Aliases: `first_name`, `fname`)
+- **Last Name**: `lastName` (Aliases: `last_name`, `lname`)
 
-### Optional Fields
-- Any additional fields (e.g., `message`, `phone`, `company`) will be captured and displayed using their key as the label.
-- `redhat`: A reserved honeypot field. Keep this empty in your UI to prevent spam; if it contains data, the submission will be silently rejected.
+*Note: While the SDK and API support these aliases for the Contacts feature, we recommend using the standard camelCase keys for consistency.*
+
+### Custom Fields
+Any additional fields (e.g., `message`, `company`) will be captured. If you want a custom label for these fields, use the `data-label` attribute in your HTML or pass a `_labels` object if using `submitForm` manually.
+
 
 ### Origin Rules
 For server-side usage, you must set an `Origin` header that matches the form’s
