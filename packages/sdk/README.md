@@ -42,15 +42,20 @@ await subscribeNewsletter({
 - **I want to add newsletter subscribers** → `@linkpane/newsletter-subscribe`
 
 ## Field Naming & Labels (Form Submissions)
+Linkpane Mailer uses an attribute-driven system to resolve labels. This allows you to use code-friendly keys (like `firstName`) while displaying human-friendly labels (like "First Name").
 
-For form submissions, Linkpane uses the **keys** in your `data` object as the labels in your inbox.
-- **Format names as labels**: Use keys like `Phone Number` or `Project Type` to have them appear correctly in your dashboard.
-- **Reserved Keys**: `email`, `firstName`, and `lastName` are reserved and required.
+Labels are resolved in this priority:
+1. **`data-label` attribute**: The highest priority.
+2. **`name` attribute**: Used if `data-label` is missing.
+3. **`id` attribute**: Fallback for `name`.
+4. **Auto-Formatting**: camelCase keys are automatically converted to Title Case.
 
 ## Required Fields (Quick Guide)
 
 **Mailer form submissions require:**
-- `email`, `firstName`, and `lastName`.
+- **Email**: `email` (Aliases: `email_address`, `emailAddress`)
+- **First Name**: `firstName` (Aliases: `first_name`, `fname`)
+- **Last Name**: `lastName` (Aliases: `last_name`, `lname`)
 
 **Newsletter subscriptions require:**
-- `email` and `firstName`. (`lastName` is optional).
+- `email` and `firstName` (Aliases supported for both).

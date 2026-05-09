@@ -15,14 +15,16 @@ Linkpane Mailer is a hosted form and email capture service by Haqqman. It allows
 - `submitForm(params)`: Programmatic submission.
 - `attachToForm(element, options)`: Browser helper that attaches to an HTML form element.
 
-#### Field Naming Rules
-- **Keys as Labels**: The keys in the `data` object (or `name` attributes in HTML) are used as labels in the Linkpane inbox. 
-- **Recommendation**: Format keys like labels (e.g., `Project Type`, `Phone Number`).
+#### Field Naming & Labels
+- **Attribute-Driven Labels**: Use the `data-label` attribute on HTML inputs for descriptive labels (e.g., `<input name="budget" data-label="Project Budget">`).
+- **Resolution Priority**: `data-label` > `name` > `id` > Auto-Formatting (camelCase to Title Case).
+- **Metadata**: Programmatic submissions can pass a `_labels` object to map keys to labels.
 
 #### Required Fields
-- `email`: Required. Used for reply-to and sender identification.
-- `firstName`: Required. Sender's first name.
-- `lastName`: Required. Sender's last name.
+- **Email**: `email` (Aliases: `email_address`, `emailAddress`).
+- **First Name**: `firstName` (Aliases: `first_name`, `fname`).
+- **Last Name**: `lastName` (Aliases: `last_name`, `lname`).
+
 
 #### Reserved Fields
 - `redhat`: Honeypot field. Must remain empty in the UI; if submitted with data, the request is silently rejected.

@@ -33,11 +33,12 @@ if (!result.ok) {
 ## Notes
 
 ### Required Fields
-- **email**: The subscriber's email address.
-- **firstName**: The subscriber's first name.
+- **Email**: `email` (Aliases: `email_address`, `emailAddress`)
+- **First Name**: `firstName` (Aliases: `first_name`, `fname`)
 
 ### Optional Fields
-- **lastName**: The subscriber's last name.
+- **Last Name**: `lastName` (Aliases: `last_name`, `lname`)
+
 
 ### Origin Rules
 For browser usage, ensure the request Origin matches the configured source domain.

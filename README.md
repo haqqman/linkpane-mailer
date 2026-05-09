@@ -62,16 +62,19 @@ import { submitForm, subscribeNewsletter } from '@linkpane/sdk'
 
 ## Required Fields (Quick Guide)
 
-Mailer form submissions require:
-- `email`
-- `firstName`
-- `lastName`
+Mailer form submissions require the following core fields for contact identification:
+- **Email**: `email` (Aliases: `email_address`, `emailAddress`)
+- **First Name**: `firstName` (Aliases: `first_name`, `fname`)
+- **Last Name**: `lastName` (Aliases: `last_name`, `lname`)
+
+*Note: Any additional fields are automatically captured and displayed in the inbox.*
 
 Newsletter subscriptions typically require:
 - `email`
 Optional:
 - `firstName`
 - `lastName`
+
 
 ## Root Export Map (optional)
 
